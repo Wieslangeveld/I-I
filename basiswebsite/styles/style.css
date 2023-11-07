@@ -28,8 +28,11 @@ img {
 /*********************/
 
 :root {
-  --color-headings:crimson
-  /* ... */
+  --color-headings:crimson;
+  --backgroundcolor: #f6cef1;
+  --maincontainerbackground:radial-gradient(#fec8f2, #f5abf5, #d868a4);
+
+  
 
 }
 
@@ -45,22 +48,20 @@ img {
 
 
 body {
-  background-color: #f6cef1; 
+  background-color: var(--backgroundcolor); 
 }
 
-h1{
-  font-size: 9em;
-  margin: 0;
-}
 
-.main-container{
+
+.main-container {
   display: grid;
-  /* align-items: center; */
-  height: 50vw;
-  grid-template-columns: 50%,50%;
-  max-width: 100%;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 53vw;
+  max-width: 75%;
   margin: 1em;
-  background: radial-gradient(#fec8f2, #f5abf5, #d868a4);
+  background: var(--maincontainerbackground);
 }
 
 /* bratz logo  */
@@ -68,7 +69,7 @@ h1{
  width: 35%;
  position: absolute;
  top: 20%; 
- left: 20%;
+ left: 18%;
  transform: translate(-50%, -50%); 
 
 }
@@ -78,50 +79,33 @@ h1{
   width: 18%;
   position: absolute;
     top: 55%; 
-    left: 32%; 
+    left: 28%; 
     transform: translate(-50%, -50%);
-}
-
-h1 {
-  color: #fec8f2 ;
-  position: absolute;
-    top: 70%; 
-    left: 4%; 
-    transform: translate(-50%, -50%) ;
-  transform: rotate(-4deg);
-}
-
-p {
-  color: #623859 ;
-  position: absolute;
-    top: 72%; 
-    left: 18%; 
-    transform: translate(-50%, -50%) ;
 }
 
 /* telefoon  */
 .main-container img:nth-of-type(3){
   width: 40%;
   position: absolute;
-    top: 23%; 
-    left: -5%; 
+    top: 22%; 
+    left: -7%; 
 }
 
 /* ster */
 .main-container img:nth-of-type(4){
-  width: 8%;
+  width: 6%;
   position: absolute;
     top: 74%; 
-    left: 26%; 
+    left: 23%; 
     transform: translate(-50%, -50%); 
 }
 
 /* baby cloe */
 .main-container img:nth-of-type(5){
-  width: 12%;
+  width: 17%;
   position: absolute;
-    top: 53%; 
-    left: 38%; 
+    top: 40%; 
+    left: 48%; 
     transform: translate(-50%, -50%); 
 }
 
@@ -129,78 +113,168 @@ p {
 .main-container img:nth-of-type(6){
   width: 30%;
   position: absolute;
-    top: 48%; 
-    left: 90%; 
+    top: 20%; 
+    left: 62%; 
     transform: translate(-50%, -50%); 
 }
 
 /* dvd afbeelding */
 .main-container img:nth-of-type(7){ 
-  width: 40%;
+  width: 48%;
   position: absolute;
     top: 45%; 
-    left: 45%; 
+    left: 38%; 
     transform: translate(-50%, -50%); 
 }
 
 /* tv items */
 .main-container img:nth-of-type(8){
-  width: 28%;
+  width: 24%;
   position: absolute;
-    top: 75%; 
-    left: 88%; 
+    top: 30%; 
+    left: 54%; 
+    transform: translate(-50%, -50%); 
+    transform: rotate(9deg);
+}
+
+/* cloe reveal  */
+.main-container img:nth-of-type(9){
+  width: 30%;
+  position: absolute;
+    top: 19%; 
+    left: 41%; 
     transform: translate(-50%, -50%); 
 }
 
-/* .main-container img:nth-of-type(9){
-  width: 25%;
+.main-container img:nth-of-type(10){
+  width: 50%;
   position: absolute;
-    top: 60%; 
-    left: 68%; 
+    top: 57%; 
+    left: 116%; 
     transform: translate(-50%, -50%); 
-} */
-
-p2 {
-  border: 5px solid rgb(120, 13, 82);
-  background: linear-gradient(20deg, #710f6c, #cf34c8, #F9C, rgb(78, 4, 103));
-  font-family: Arial;
-  font-size: 8pt;
-  padding: 20px;
-  padding-left: 9%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  text-align: justify;
-  border-radius: 20% ;
-  position: absolute;
-  margin-top: 25%;
-  margin-left: 32%;
+    position: relative; /* Dit is vereist voor z-index om te werken */
+    z-index: 2;
 }
 
-H2 {
-  font-family: Arial;
-  position: absolute;
-  margin-top: 3%;
-  margin-left: 43%;
- }
-
- /* zorgt voor trillende telefoon */
- .trillen:hover { 
-  transition: transform 0,3s;
-  position: relative;
-  animation: trillen 0,3s infinite;
- }
-
- @keyframes trillen {
-  0% { transform: translateX(0); }
-  25% { transform: rotate(3deg); }
-  50% { transform: rotate(-3deg); }
-  75% { transform:  rotate(3deg); }
-  100% { transform:  rotate(-3deg); }
+/* afbeelding van cloe die gerevealed wordt  */
+#afbeelding {
+  width: 30%; 
+  height: auto;
+  cursor: pointer; 
 }
+
+/* cloe */
+h1 {
+  color: #fec8f2 ;
+  position: absolute;
+    top: 76%; 
+    left: 2%; 
+    transform: translate(-50%, -50%) ;
+  transform: rotate(-4deg);
+  font-size: 9em;
+  margin: 0;
+}
+
+
+/* trillen van de telefoon */
+#tril-afbeelding {
+  height: auto;
+  transition: transform 0.3s ease; 
+}
+
+#tril-afbeelding:hover {
+  transform: rotate(-2deg); 
+  animation: shake 0.3s infinite alternate; 
+}
+
+@keyframes shake {
+  0% {
+      transform: rotate(-2deg);
+  }
+  100% {
+      transform: rotate(2deg);
+  }
+}
+
+/* Stijlen voor de knoppen */
+.knop {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#knop1 {
+  background-color: #0074d9;
+  position: absolute;
+  top: 78%; 
+  left: 15%; 
+  transform: translate(-50%, -50%) ;
+  transform: rotate(-3deg);
+}
+
+#knop2 {
+  background-color: #ff5733;
+  position: absolute;
+  top: 48%; 
+  left: 46%; 
+  transform: translate(-50%, -50%) ;
+  transform: rotate(-3deg);
+}
+
+#knop3 {
+  background-color: #e69d1e;
+  position: absolute;
+  top: 6%; 
+  left: 41%; 
+  transform: translate(-50%, -50%);
+}
+
+
+#knop4 {
+  background: linear-gradient(to bottom, #fcecfc 0%,#fa7aff 3%,#fcccec 6%,#ff1cba 10%,#ca70e5 14%,#dd2eaf 17%,#ffccef 20%,#ff56cc 23%,#dd30dd 26%,#ff7cd8 31%,#ff2dc0 35%,#ff7fd8 38%,#e04ce0 41%,#d86aa5 43%,#b950d3 47%,#a51c73 49%,#cc63bc 51%,#ffccef 53%,#ff60cf 56%,#ff32c1 59%,#ad2e7c 61%,#ad3ebc 65%,#dd4dd1 68%,#e170e5 71%,#e8229c 76%,#c92a99 80%,#ff7cd8 82%,#e5478e 85%,#dd6cdb 89%,#ef5bc8 92%,#e774ed 95%,#ffb2ed 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border: none;
+  position: absolute;
+  top: 74%; 
+  left: 48%; 
+  transform: translate(-50%, -50%);
+  padding-top: 4em;
+  padding-bottom: 18em;
+  padding-left:16em;
+  padding-right: 5em;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#knop5 {
+  background-color: #33b6ff;
+  position: absolute;
+  top: 17%; 
+  left: 72%; 
+  transform: translate(-50%, -50%);
+  
+}
+
+  
+#tekstvak {
+  width: 30%;
+  padding: 10px;
+  max-width: 20%;
+  max-height: 50%;
+  margin-bottom: auto;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 4%; 
+  left: 88%; 
+  transform: translate(-50%, -50%) ;
+}
+
 
 /* draaiende afbeelding  */
 .rondjes-draai-afbeelding {
-  animation: rondjes-draai 10s linear infinite; /* 4 seconden voor een volledige rotatie */
+  animation: rondjes-draai 10s linear infinite; 
   transform-origin: center;
   width: 25%;
   position: absolute;
@@ -218,51 +292,4 @@ H2 {
   }
 }
 
-/* #tril-afbeelding {
-  transition: transform 0.2s;
-  cursor: pointer;
-}
 
-.trillen {
-  animation: trillen 0.1s infinite;
-}
-
-@keyframes trillen {
-  0% { transform: translateX(0) rotate(0deg); }
-  25% { transform: translateX(2px) rotate(3deg); }
-  50% { transform: translateX(-2px) rotate(-3deg); }
-  75% { transform: translateX(2px) rotate(3deg); }
-  100% { transform: translateX(-2px) rotate(-3deg); }
-} */
-
-.afbeelding-container {
-  position: relative;
-  cursor: pointer;
-  position: absolute;
-    top: 18%; 
-    left: 27%; 
-}
-
-.afbeelding-container {
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.afbeelding {
-  width: 1700px;
-  height: 300px;
-  position: absolute;
-  transition: transform 1s;
-  backface-visibility: hidden;
-}
-
-.afbeelding img {
-  width: 60%;
-  transition: transform 0.5s;
-}
-
-p {
-  font-size: 16px; /* Pas de gewenste lettergrootte aan */
-  color: #333; /* Pas de gewenste tekstkleur aan */
-  /* Voeg andere gewenste stijlen toe */
-}

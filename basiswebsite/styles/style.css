@@ -31,9 +31,7 @@ img {
   --color-headings:crimson;
   --backgroundcolor: #f6cef1;
   --maincontainerbackground:radial-gradient(#fec8f2, #f5abf5, #d868a4);
-
   
-
 }
 
 
@@ -156,6 +154,28 @@ body {
     z-index: 2;
 }
 
+.main-container img:nth-of-type(11){
+  width: 4%;
+  position: absolute;
+    top: 30%; 
+    left: 36%; 
+    transform: translate(-50%, -50%); 
+}
+.main-container img:nth-of-type(12){
+  width: 8%;
+  position: absolute;
+    top: 50%; 
+    left: 39%; 
+    transform: translate(-50%, -50%); 
+}
+.main-container img:nth-of-type(13){
+  width: 5%;
+  position: absolute;
+    top: 27%; 
+    left: 72%; 
+    transform: translate(-50%, -50%); 
+}
+
 /* afbeelding van cloe die gerevealed wordt  */
 #afbeelding {
   width: 30%; 
@@ -173,6 +193,26 @@ h1 {
   transform: rotate(-4deg);
   font-size: 9em;
   margin: 0;
+}
+
+/* de film */
+h2 {
+  color: #e168c7 ;
+  position: absolute;
+    top: 3%; 
+    left: 81%; 
+    transform: translate(-50%, -50%) ;
+  font-size: 2em;
+}
+
+/* het zelfvertrouwen */
+h3 {
+  color: #e168c7 ;
+  position: absolute;
+    top: 53%; 
+    left: 85%; 
+    transform: translate(-50%, -50%) ;
+  font-size: 2em;
 }
 
 
@@ -207,29 +247,32 @@ h1 {
 }
 
 #knop1 {
-  background-color: #0074d9;
+  background-color: #ca45a0;
   position: absolute;
   top: 78%; 
   left: 15%; 
   transform: translate(-50%, -50%) ;
   transform: rotate(-3deg);
+   border-radius: 20%;
 }
 
 #knop2 {
-  background-color: #ff5733;
+  background-color: #ca45a0;
   position: absolute;
   top: 48%; 
   left: 46%; 
   transform: translate(-50%, -50%) ;
   transform: rotate(-3deg);
+  border-radius: 20%;
 }
 
 #knop3 {
-  background-color: #e69d1e;
+  background-color: #ca45a0;
   position: absolute;
   top: 6%; 
   left: 41%; 
   transform: translate(-50%, -50%);
+  border-radius: 20%;
 }
 
 
@@ -249,12 +292,29 @@ h1 {
 }
 
 #knop5 {
-  background-color: #33b6ff;
+  background-color: #ca45a0;
   position: absolute;
   top: 17%; 
   left: 72%; 
   transform: translate(-50%, -50%);
+  border-radius: 20%;
   
+}
+#knop1:hover {
+  background-color: #ff00f2;
+}
+
+#knop2:hover {
+  background-color: #ff00f2;
+}
+
+#knop3:hover {
+  background-color: #ff00f2;
+}
+
+
+#knop5:hover {
+  background-color: #ff00f2;
 }
 
   
@@ -292,4 +352,134 @@ h1 {
   }
 }
 
+/* .button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+} */
 
+#content {
+  display: none;
+  position: absolute; /* Verander de positie naar 'absolute' */
+  top: 5em; /* Stel de gewenste bovenmarge in */
+  left: 70em; /* Stel de gewenste linkermarge in */
+  padding: 20px;
+  background-color: #ffe5f1;
+  max-width: 18em; /* Pas de maximale breedte van het vak aan */
+}
+
+/* testen  */
+
+.button1 {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #bc3ba4;
+  color: #fff;
+  border: dotted;
+  cursor: pointer;
+  position: absolute;
+  top: 65%; 
+  left: 83%; 
+  transform: translate(-50%, -50%); 
+}
+
+.button2 {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #bc3ba4;
+  color: #fff;
+  border: dotted;
+  cursor: pointer;
+  position: absolute;
+  top: 65%; 
+  left: 92%; 
+  transform: translate(-50%, -50%); 
+}
+
+.button3 {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #bc3ba4;
+  color: #fff;
+  border: dotted;
+  cursor: pointer;
+  position: absolute;
+  top: 70%; 
+  left: 81%; 
+  transform: translate(-50%, -50%); 
+}
+
+.button4 {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #bc3ba4;
+  color: #fff;
+  border: dotted;
+  cursor: pointer;
+  position: absolute;
+  top: 70%; 
+  left: 90%; 
+  transform: translate(-50%, -50%); 
+}
+
+.button5 {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #bc3ba4;
+  color: #fff;
+  border: dotted;
+  cursor: pointer;
+  position: absolute;
+  top: 75%;  
+  left: 82%; 
+  transform: translate(-50%, -50%); 
+}
+
+.button1:hover {
+  background-color: #ff00f2;
+}
+.button2:hover {
+  background-color: #ff00f2;
+}
+.button3:hover {
+  background-color: #ff00f2;
+}
+.button4:hover {
+  background-color: #ff00f2;
+}
+.button5:hover {
+  background-color: #ff00f2;
+}
+
+#displayed-image {
+  /* Voeg hier je stijlregels voor de afbeelding toe */
+  max-width: 100%; /* Voorbeeld: beperk de maximale breedte van de afbeelding */
+  max-height: 100%; /* Voorbeeld: beperk de maximale hoogte van de afbeelding */
+  width: 15%;
+  position: absolute;
+  top: 90%; 
+  left: 88%; 
+  transform: translate(-50%, -50%); 
+}
+
+#linkButton {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #bc3ba4;
+  color: #fff;
+  border: outset;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; 
+  left: 60%; 
+  transform: translate(-50%, -50%); 
+
+}
+
+/* CSS-stijl voor hover-effect */
+#linkButton:hover {
+  background-color: #ff00f2;
+}

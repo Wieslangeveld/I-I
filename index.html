@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html lang="nl">
-	
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>VIDii 2023/24 - Tijdlijn</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/png+xml" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="author" content="Wies Langeveld">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>VIDii 2023/24 - Tijdlijn</title>
+
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="GIF/silver star.gif">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-	<h1>Howdy I&I</h1>
+    <section class="main-container">
+       <img src="./GIF/title bratz .gif">
+       <img src="./GIF/cloe main 2.gif">
+       <img id="tril-afbeelding" src="images/phone.png" alt="Tril Afbeelding">
+       <img src="./GIF/pink star.gif"> 
+	   <img src="images/Mini cloe in ster.png"> 
+       <img src="images/Cloe cards.png">
+       <img class="rondjes-draai-afbeelding" src="images/DVD afbeelding.png" alt="draaiende afbeelding">
+       <img src="images/Bratz movie extra.png">
+	   <img id="afbeelding" src="images/cloe before.png" alt="Afbeelding 1" onclick="veranderAfbeelding()">
+	   <img src="images/cloe uit genie.png">
+	   <img src="GIF/yellow star.gif">
+	   <img src="GIF/vlinder.gif">
+	   <img src="GIF/silver star.gif">
+	 
+	   <h1>Cloe</h1>
+	   <h2> De film </h2>
+	   <h3> Het zelfvertrouwen</h3>
 
+	<button id="knop1" onclick="showContent(1)">passion 4 fashion</button>
+	<button id="knop2" onclick="showContent(2)">sleepover</button>
+	<button id="knop3" onclick="showContent(3)">Bratz movie</button>
+	<button id="knop4" onclick="showContent(4)">Genie magic</button>
+	<button id="knop5" onclick="showContent(5)">starrin' & stylin'</button>
+	<div id="content"></div>
 
-
-	<script src="scripts/script.js"></script>
-</body>
+	<button class="button1" onclick="showImage(1)">passion 4 fashion</button>
+	<button class="button2" onclick="showImage(2)">sleepover</button>
+	<button class="button3" onclick="showImage(3)">Bratz movie</button>
+	<button class="button4" onclick="showImage(4)">Genie magic</button>
+	<button class="button5" onclick="showImage(5)">starrin' & stylin'</button>
+	<div id="image-container">
+	  <img id="displayed-image">
+	</div>
+	<a id="linkButton" href="https://www.youtube.com/watch?v=fVrOW9p8J24">Extra!</a>
 	
+	
+<script src="script.js"></script>
+ <script src="scripts/script.js"></script>
+	
+</body>
+
 </html>
